@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SlicerDialog</class>
+ <widget class="QDialog" name="SlicerDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>486</width>
+    <height>230</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>配置切片引擎</string>
+  </property>
+  <widget class="QDialogButtonBox" name="btnOk">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>180</y>
+     <width>156</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+   <property name="centerButtons">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>434</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>切片配置文件</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cmbProfile">
+      <item>
+       <property name="text">
+        <string>High Quality</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Normal Quality</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Low Quality</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnAdd">
+      <property name="text">
+       <string>添加文件</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnEdit">
+      <property name="text">
+       <string>编辑文件</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnDel">
+      <property name="text">
+       <string>删除文件</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>55</y>
+     <width>231</width>
+     <height>118</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="toolTip">
+       <string>打印温度，PLA设置210℃，ABS设置230℃。</string>
+      </property>
+      <property name="whatsThis">
+       <string>what this</string>
+      </property>
+      <property name="text">
+       <string>打印温度(℃)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QSpinBox" name="tempVal">
+      <property name="minimum">
+       <number>180</number>
+      </property>
+      <property name="maximum">
+       <number>250</number>
+      </property>
+      <property name="value">
+       <number>210</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="toolTip">
+       <string>打印层高，高精度设置100，其他可设置200-300，速度快打印质量较低。</string>
+      </property>
+      <property name="text">
+       <string>层高(um)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="toolTip">
+       <string>填充线间距，完全填充设置0，其他推荐3000</string>
+      </property>
+      <property name="text">
+       <string>填充间距(um)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>打印底座(Raft)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QCheckBox" name="enableRaft">
+      <property name="text">
+       <string>使用</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>支撑层(Support)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QCheckBox" name="enableSupport">
+      <property name="text">
+       <string>使用</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QSpinBox" name="tempVal_2">
+      <property name="minimum">
+       <number>50</number>
+      </property>
+      <property name="maximum">
+       <number>300</number>
+      </property>
+      <property name="value">
+       <number>200</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QSpinBox" name="tempVal_3">
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>10000</number>
+      </property>
+      <property name="singleStep">
+       <number>400</number>
+      </property>
+      <property name="value">
+       <number>2000</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>btnOk</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>btnAdd</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnOk</sender>
+   <signal>accepted()</signal>
+   <receiver>SlicerDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnOk</sender>
+   <signal>rejected()</signal>
+   <receiver>SlicerDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
